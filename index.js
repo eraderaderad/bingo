@@ -1,5 +1,11 @@
 console.log("me myself and i");
 
+let B = false,
+ I = false,
+ N = false,
+ G = false,
+ O = false;
+
 generateRandomNumber(30);
 
 function generateRandomNumber(max) 
@@ -8,27 +14,35 @@ function generateRandomNumber(max)
 
         if(randomNum <= 15)
         {
-            return console.log(`Random Number ${randomNum} is in B. 1 - 15`)
+            B = true;
+            console.log(`Random Number ${randomNum} is in B. 1 - 15`)
         } 
 
         else if (randomNum >= 16 && randomNum <= 30) {
-            return console.log(`Random Number ${randomNum} is I. 16 - 30`)
+            I = true
+            console.log(`Random Number ${randomNum} is I. 16 - 30`)
         }
 
         else if (randomNum >= 31 && randomNum <= 45) {
-            return console.log(`Random Number ${randomNum} is N. 31 - 46`)
-        }
-
-        else if (randomNum >= 46 && randomNum <= 60) {
-            return console.log(`Random Number ${randomNum} is G. 46 - 61`)
+            N = true
+            console.log(`Random Number ${randomNum} is N. 31 - 46`)
         }
         
-        else if (randomNum >= 61 && randomNum <= 75) {
-            return console.log(`Random Number ${randomNum} is O. 61 - 75`)
+        else if (randomNum >= 46 && randomNum <= 60) {
+            G = true
+            console.log(`Random Number ${randomNum} is G. 46 - 61`)
+        }
+        
+        else if (randomNum >= 61 && randomNum <= 75) { 
+            O = true
+            console.log(`Random Number ${randomNum} is O. 61 - 75`)
         }
 
         else {
-            return console.log(`Random Number is invalid.`)
+            console.log(`Random Number is invalid.`)
+        }
+        if (B == true && I == true && N == true && G == true && O == true){
+            console.log(`Bingo!!!`);
         }
     }
 
